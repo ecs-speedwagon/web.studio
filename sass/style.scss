@@ -1,0 +1,35 @@
+@import "./vars";
+@import "./utilities/mixin";
+@import "./componentsP/header";
+@import "./componentsP/applications";
+@import "./componentsP/app-cards";
+@import "./componentsP/footer";
+@import "./componentsWS/header";
+@import "./componentsWS/main-sec";
+@import "./componentsWS/footer";
+@import "./componentsWS/svg-sec";
+@import "./componentsWS/team";
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+h5{
+    margin-block-start: 0;
+    margin-block-end: 0 ;
+}
+img{
+    overflow-clip-margin: content-box 0px;
+}
+a{
+    text-decoration: none;
+    color: var(--fourth-color);
+    cursor: default;
+}
+ul{
+    padding-inline-start: 0px;
+}
+li{
+    list-style: none;
+}
+

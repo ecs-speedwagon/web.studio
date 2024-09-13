@@ -1,0 +1,109 @@
+.navigation-cont-a{
+    transition-property: color ;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.83, -0.08, 0.32, 1);
+    transition-delay: 10ms;
+    text-decoration: none;
+    color: $fourth-color;
+    position: relative;
+}
+.navigation-cont-a:hover{
+    color: $hover-color;
+    cursor: pointer;
+}
+.navigation-cont-a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    height: 4px;
+    border-radius: 4px;
+    background-color: inherit;
+    transition-property:background-color, width ;
+    transition-duration: 500ms;
+    transition-timing-function:cubic-bezier(0.83, -0.08, 0.32, 1) ;
+    transition-delay: 10ms;
+}
+a:hover::after{
+    width: 100%;
+    background-color:$hover-color;
+}
+
+.navigation-cont-el{
+    display: flex;
+    flex-direction: column;
+}
+.main-logo{
+    @include txt($font-f:'Raleway', $font-w: 700, $font-s: 26px, $line-h: 31px, $lett-s: 0.03px, $color:#000,  $txt-decor:none, $txt-align:left);
+   
+}
+.Web{
+    color: $hover-color;
+}
+.main-nav{
+    display:flex;  
+    align-items: center;
+    height: 80px;
+    gap: 95px;
+}
+.main-nav-child{
+    display: flex;
+    justify-content: space-between;
+    gap: 310px;
+    margin: 0;
+    padding: 0;
+}
+.navigation-cont{
+    @include txt($font-f:'Roboto', $font-w: 500, $font-s:  14px, $line-h: 16px, $lett-s: 0.02em, $color: $fourth-color,  $txt-decor:none, $txt-align:left);
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-around;   
+}
+.connection-el>a{
+    display: flex;
+}
+.connection{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.connection-el{
+    @include txt($font-f: 'Roboto', $font-w: 500, $font-s: 14px, $line-h: 16px, $lett-s:0.02em, $color:$fourth-color,  $txt-decor:none, $txt-align:left);
+    gap: 10px;
+   display: flex;
+}
+.connection-el>a{
+    transition-property:color ;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.83, -0.08, 0.32, 1);
+    transition-delay: 10ms;
+}
+.info-el{
+    fill:  rgba(117, 117, 117, 1);
+    transition-property: fill ;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.83, -0.08, 0.32, 1);
+    transition-delay: 10ms;
+    
+}
+.connection-el:hover{
+    color: $fourth-color;
+    >a{
+        color: $hover-color;
+    }
+.info-el{
+    fill: $hover-color;}
+}
+.connection-el{
+    @include txt($font-f: 'Roboto', $font-w: 500, $font-s: 14px, $line-h: 16px, $lett-s:0.02em, $color:$fourth-color,  $txt-decor:none, $txt-align:left);
+    gap: 10px;
+    display: flex;
+}
+.connection-el:hover{
+    color: $fourth-color;
+    
+.info-el{
+    fill: $hover-color;}
+}

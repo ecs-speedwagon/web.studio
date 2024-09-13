@@ -1,0 +1,251 @@
+.hero{  
+    height: 600px; 
+    width: 100%;
+    padding-top: 200px;
+    background-image: linear-gradient( to bottom, rgba(47, 48, 58, 0.4), rgba(130, 132, 160, 0.4)),  
+        url(../img/Img.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+}
+.main-section-item{
+    @include txt($font-f: 'Roboto', $font-w: 900, $font-s: 44px, $line-h: 60px, $lett-s:0.06em, $color:$third-color,  $txt-decor:none, $txt-align:center);
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+.main-section-item-button{
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 16px, $line-h: 30px, $lett-s:0.06em, $color:$third-color,  $txt-decor:none, $txt-align:center); 
+    background-color: rgba(33, 150, 243, 1);
+    border: none; 
+    border-radius: 5px;
+    padding: 10px 30px;
+    display: flex;
+    margin: 30px auto;
+
+}
+.svg-cont{
+    display: flex;
+    margin: 95px auto;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.svg-cap{
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16px, $lett-s:0.03em, $color: $fourth-color,  $txt-decor:none, $txt-align: left);
+    background-color: $third-color;
+}
+.svg-subtitle{
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color: $fifth-color,  $txt-decor:none, $txt-align:left); 
+    background-color: $third-color;
+}
+.svg-cont-el::before{
+    display: block;
+ content: "";
+ width: 270px;
+ height: 120px;
+ border-radius: 3px;
+ background-color:$second-color ;
+}
+.svg-cont-el:first-child::before{
+    background-image: url(../img/antenna.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.svg-cont-el:nth-child(2):before{
+    background-image: url(../img/clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.svg-cont-el:nth-child(3):before{
+    background-image: url(../img/Vector.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.svg-cont-el:last-child::before{
+    background-image: url(../img/astronaut\ .svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.picture-box{
+    display: flex;
+    justify-content: space-between;
+}
+.picture-box-item{
+    width: 370px;
+    height: 294px;
+    padding: 15px;
+}
+.picture-overlay{
+    position: relative;
+    top: 279px;
+    left: 15px;
+   width: 340px;
+    height:65px;
+    background-color: rgba(47, 48, 58, 0.8);
+    margin-top: -65px;
+}
+.picture-overlay>p{
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:rgba(255, 255, 255, 1),  $txt-decor:none, $txt-align:center);
+    text-transform: uppercase;
+padding-top: 23px;
+}
+
+
+
+
+
+.employment{
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s:36px, $line-h: 42px, $lett-s:0.03em, $color:$fourth-color,  $txt-decor:none, $txt-align:center);
+    padding-top: 0px;
+}
+
+
+
+.icon{
+    fill: $icon-color;
+    margin-top: 11px;
+    margin-left: 11px;
+    transition-property: fill, border, cursor ;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.83, -0.08, 0.32, 1);
+    transition-delay: 10ms;
+}
+
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    z-index: 2;
+}
+.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+.modal{
+    position: absolute;
+    top: 20%;
+    left: 36%;
+    background-color:$third-color;
+    min-width: 528px;
+    min-height: 581px;
+    transform: translate(-50% -50%);
+    padding: 15px;
+}
+.no-scroll{
+    overflow: visible;
+}
+
+.modal-name{
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 20px, $line-h: 23.44px, $lett-s:0.03em, $color:#000,  $txt-decor:none, $txt-align:center);
+
+}
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    
+}
+.modal-form>label{
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 12px, $line-h:  14px, $lett-s:0.01em, $color:rgba(117, 117, 117, 1),  $txt-decor:none, $txt-align:left);
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+.place-icon{
+    fill: rgba(33, 33, 33, 1);
+    position: relative;
+    bottom: 25px;
+    left: 15px;
+}
+
+.modal-form-el{
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 447px;
+ border: 1px solid rgba(33, 33, 33, 0.2);
+ border-radius: 4px;
+ padding-left: 40px;
+ margin-top: 5px;
+}
+
+.modal-form-el:focus{
+    color: $hover-color;
+    outline: 1px solid $hover-color;
+    + .place-icon{
+    fill: $hover-color;
+    }
+}
+
+.modal-form-el:hover{
+    cursor: pointer;
+}
+
+.modal-form-ch:focus{
+color: $hover-color;
+cursor: pointer;
+    fill: $hover-color;
+}
+
+
+
+#modal-comm{
+    margin:0 auto;
+    height: 120px;
+    width: 447px;
+ 
+    padding-left: 15px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+ border-radius: 4px;
+ margin-bottom: 15px;
+}
+#checkbox-link{
+    color: $hover-color;
+    text-decoration:  underline;
+    cursor: default;
+}
+.m-f-checkbox{
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color:rgba(117, 117, 117, 1),  $txt-decor:none, $txt-align:left);
+    margin: 0 auto;
+
+}
+.modal-form>button{
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 16px, $line-h: 30px, $lett-s:0.06em, $color:$third-color,  $txt-decor:none, $txt-align:center);
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+    background-color: $hover-color;
+    margin:25px auto ;
+    box-shadow: 0px 1px 3px $fifth-color;
+}
+
+
+.modal-btn{
+    margin-left: 470px;
+    border: 1px solid rgba(33, 33, 33, 0.2)  ;
+    background-color: $third-color;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.X{
+    transition-property: fill ;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.83, -0.08, 0.32, 1);
+    transition-delay: 10ms;
+}
+.modal-btn:hover{
+    cursor: pointer;
+    .X{
+        fill: $hover-color;
+        
+    }
+    
+}

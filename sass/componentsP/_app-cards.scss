@@ -1,0 +1,98 @@
+.app-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 95px;
+    
+}
+.app-cards-el{
+    width: calc( (100% - 60px)/3 );
+    line-height: 0;
+    position: relative;
+   overflow: hidden;
+   height: 404px;
+}
+
+.app-cards-el:hover{
+    box-shadow: 1px 2px 3px var(--fifth-color);
+   .porf-pic-hover{
+    animation-name: appearance;
+    animation-duration: 1s;
+    animation-delay: 10ms;
+    animation-fill-mode: both;
+    >p{
+        opacity: 1;
+    }
+   }
+
+}
+.app-cards-div{
+    width: 370px;
+    height: 110px;
+  padding-top: 25px;
+  padding-left: 20px;
+   border-bottom: 2px solid #ECECEC;
+    border-left: 1px solid #ECECEC;
+    border-right: 1px solid #ECECEC;
+  position: absolute;
+  z-index: 3;
+
+}
+.app-c-title{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    color: var(--fourth-color);
+    text-align: left; 
+    margin-bottom: 0;
+}
+.app-c-subtitle{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--fifth-color);
+    text-align: left; 
+    margin-top: 0;
+    padding-top: 10px;
+}
+.porf-pic-hover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 63px 24px;
+    height: 294px;
+    z-index: 1;
+}
+.porf-pic-hover>p{
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+        width: 322px;
+        height: 168px;
+        padding-left: 17px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1); 
+    
+    opacity: 0;
+ 
+}
+@keyframes appearance{ 
+    0%{
+    transform: translateY(100%);
+    
+ }
+ 100%{ 
+    transform: translateY(0%);
+    background-color: rgba(33, 150, 243, 0.9);
+}
+}
+   
+    

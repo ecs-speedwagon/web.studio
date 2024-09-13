@@ -1,0 +1,40 @@
+.regular-customers{
+    max-height: 375px;
+ }
+ .regular-customers>h2{
+     margin-top:  94px;
+ }
+ .employment{
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 36px, $line-h: 42px, $lett-s:0.03em, $color:$fourth-color,  $txt-decor:none, $txt-align:center);
+    padding-top: 0px;
+}
+.regulars-logo{
+    display: flex;
+    gap: 32px;
+}
+.regulars-logo>li{
+    margin-top: 50px;
+    width: 170px;
+    height: 92px;
+    border: solid 1px #AFB1B8;
+    border-radius: 5px;
+    margin-bottom: 95px;
+    padding: 15px 30px;
+    transition-property: fill, border ;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.83, -0.08, 0.32, 1);
+    transition-delay: 10ms;
+}
+.regulars-logo-item{
+fill: $icon-color;
+transition-property: fill, border ;
+transition-duration: 300ms;
+transition-timing-function: cubic-bezier(0.83, -0.08, 0.32, 1);
+transition-delay: 10ms;
+}
+.regulars-logo>li:hover{
+    border:solid 1px $hover-color;
+    .regulars-logo-item{
+    fill: $hover-color;
+border: none;}
+}
