@@ -28,8 +28,17 @@ address{
 }
 .foot-cont{
     display: flex;
+    flex-direction: column;
     gap: 40px;
     justify-content: center;
+}
+@media screen and (min-width:1200px){
+    .foot-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    }
 }
 .join-cont{
     display: flex;

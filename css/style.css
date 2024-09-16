@@ -107,8 +107,8 @@ a:hover::after {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  color: #212121;
   text-decoration: none;
-  color: var(--fourth-color);
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,18 +148,18 @@ a:hover::after {
 }
 
 .connection-el {
-  gap: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  color: #212121;
   text-decoration: none;
-  color: var(--fourth-color);
   text-align: left;
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .connection-el > a {
@@ -184,18 +184,18 @@ a:hover::after {
 }
 
 .connection-el {
-  gap: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  color: #212121;
   text-decoration: none;
-  color: var(--fourth-color);
   text-align: left;
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .connection-el:hover {
@@ -235,8 +235,8 @@ a:hover::after {
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.03em;
+  color: #212121;
   text-decoration: none;
-  color: var(--fourth-color);
   text-align: center;
   background-color: var(--second-color);
   padding: 4px;
@@ -316,8 +316,8 @@ a:hover::after {
   font-size: 18px;
   line-height: 30px;
   letter-spacing: 0.06em;
+  color: #212121;
   text-decoration: none;
-  color: var(--fourth-color);
   text-align: left;
   margin-bottom: 0;
 }
@@ -328,8 +328,8 @@ a:hover::after {
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.03em;
+  color: #757575;
   text-decoration: none;
-  color: var(--fifth-color);
   text-align: left;
   margin-top: 0;
   padding-top: 10px;
@@ -346,15 +346,16 @@ a:hover::after {
 
 .porf-pic-hover > p {
   font-family: "Roboto";
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.03em;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: left;
   width: 322px;
   height: 168px;
   padding-left: 17px;
-  text-align: left;
-  color: rgb(255, 255, 255);
   opacity: 0;
 }
 
@@ -434,6 +435,10 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .join-cont {
@@ -485,7 +490,7 @@ address {
   cursor: pointer;
 }
 
-.join-div > h3 {
+.join-div > h4 {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 14px;
@@ -505,6 +510,45 @@ address {
 
 .join-help-div {
   margin-left: 63px;
+}
+
+.input-div {
+  margin-left: 30px;
+}
+
+.email-txt {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.41px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.email-input {
+  border: 1px solid #757575;
+  border-radius: 3px;
+  padding: 10px 20px;
+  background-color: inherit;
+}
+
+.email-btn {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #757575;
+  border-radius: 3px;
+  padding: 4px 30px;
+  margin-left: 10px;
+  background-color: #2196F3;
 }
 
 .navigation-cont-a {
@@ -587,17 +631,23 @@ a:hover::after {
 }
 
 .main-nav-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 310px;
-  margin: 0;
-  padding: 0;
+  opacity: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  .main-nav-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 310px;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+  }
+}
 .navigation-cont {
   font-family: "Roboto";
   font-weight: 500;
@@ -705,7 +755,6 @@ a:hover::after {
 }
 
 .hero {
-  height: 600px;
   width: 100%;
   padding-top: 200px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(130, 132, 160, 0.4))), url(../img/Img.svg);
@@ -713,8 +762,27 @@ a:hover::after {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    padding-top: 200px;
+  }
+}
 .main-section-item {
   font-family: "Roboto";
   font-weight: 900;
@@ -756,13 +824,34 @@ a:hover::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 95px auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .svg-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 95px auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: first baseline;
+        -ms-flex-align: first baseline;
+            align-items: first baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 30px;
+  }
+}
 .svg-cap {
   font-family: "Roboto";
   font-weight: 700;
@@ -771,10 +860,22 @@ a:hover::after {
   letter-spacing: 0.03em;
   color: #212121;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
   background-color: #FFFFFF;
 }
 
+@media screen and (min-width: 1200px) {
+  .svg-cap {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #212121;
+    text-decoration: none;
+    text-align: left;
+  }
+}
 .svg-subtitle {
   font-family: "Roboto";
   font-weight: 400;
@@ -821,14 +922,20 @@ a:hover::after {
 }
 
 .picture-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .picture-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    opacity: 1;
+  }
+}
 .picture-box-item {
   width: 370px;
   height: 294px;
@@ -870,6 +977,25 @@ a:hover::after {
   padding-top: 0px;
 }
 
+.employment-pic {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .employment-pic {
+    display: block;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    color: #212121;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 0px;
+    opacity: 1;
+  }
+}
 .icon {
   fill: rgb(175, 177, 184);
   margin-top: 11px;
@@ -1118,12 +1244,31 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 40px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .foot-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .join-cont {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1235,9 +1380,14 @@ address {
 }
 
 .regular-customers {
-  max-height: 375px;
+  max-height: 750px;
 }
 
+@media screen and (min-width: 1200px) {
+  .regular-customers {
+    max-height: 375px;
+  }
+}
 .regular-customers > h2 {
   margin-top: 94px;
 }
@@ -1255,12 +1405,26 @@ address {
 }
 
 .regulars-logo {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 32px;
+  row-gap: -100px;
+  gap: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .regulars-logo {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 32px;
+  }
+}
 .regulars-logo > li {
   margin-top: 50px;
   width: 170px;
@@ -1301,10 +1465,16 @@ address {
 
 .background-div {
   background-color: #F5F4FA;
-  height: 710px;
-  padding-top: 90px;
+  height: 2770px;
+  padding-top: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .background-div {
+    height: 710px;
+    padding-top: 90px;
+  }
+}
 .employment {
   font-family: "Roboto";
   font-weight: 700;
@@ -1321,18 +1491,41 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
+@media screen and (min-width: 1200px) {
+  .team-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 .team-div {
   background-color: #FFFFFF;
-  gap: 30px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   -webkit-box-shadow: 0px 1px 2px #757575;
           box-shadow: 0px 1px 2px #757575;
 }
 
+@media screen and (min-width: 1200px) {
+  .team-div {
+    gap: 30px;
+  }
+}
 .team-cont-tit {
   font-family: "Roboto";
   font-weight: 500;
@@ -1350,25 +1543,36 @@ address {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.03em;
-  text-decoration: none;
   color: #212121;
+  text-decoration: none;
   text-align: center;
 }
 
 .people-pic {
-  width: 270px;
-  height: 260px;
+  width: 450px;
+  height: 460px;
 }
 
+@media screen and (min-width: 1200px) {
+  .people-pic {
+    width: 270px;
+    height: 260px;
+  }
+}
 .icon-cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  margin-bottom: 45px;
-  margin-left: 31px;
+  margin-bottom: 25px;
+  margin-left: 25%;
 }
 
+@media screen and (min-width: 1200px) {
+  .icon-cont {
+    margin-left: 11%;
+  }
+}
 .icon-circle {
   width: 44px;
   height: 44px;
@@ -1410,11 +1614,18 @@ address {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: auto;
   padding: 0 15px;
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
 h5 {
   -webkit-margin-before: 0;
           margin-block-start: 0;

@@ -1,7 +1,13 @@
 .background-div{
     background-color: #F5F4FA;
-    height: 710px;
-    padding-top: 90px;
+    height: 2770px;
+    padding-top: 30px;
+}
+@media screen and (min-width:1200px){
+    .background-div{
+        height: 710px;
+        padding-top: 90px;
+    }
 }
 .employment{
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 36px, $line-h: 42px, $lett-s:0.03em, $color:$fourth-color,  $txt-decor:none, $txt-align:center);
@@ -9,38 +15,57 @@
 }
 .team-list{
     display: flex;
+    flex-direction: column;
+    row-gap: 30px;
     justify-content: space-between;
+}
+@media screen and (min-width:1200px){
 
+.team-list{
+    flex-direction: row;
+    justify-content: space-between;
+}
 }
 .team-div{
     background-color: #FFFFFF;
-    gap: 30px;
+    column-gap: 30px;
     box-shadow: 0px 1px 2px $fifth-color;
 }
+@media screen and (min-width:1200px){
+    .team-div{
+        gap: 30px;
+    }
+}
 .team-cont-tit{
-    @include txt($font-f: 'Roboto', $font-w: 500, $font-s: 16px, $line-h: 19px, $lett-s:0.03em, $color:$fourth-color,  $txt-decor:none, $txt-align:center);
+    @include txt($font-f: 'Roboto', $font-w: 500, $font-s: 16px, $line-h: 19px, $lett-s:0.03em, $color: $fourth-color,  $txt-decor:none, $txt-align:center);
 }
 .team-cont-job{
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    color: $fourth-color;
-    text-align: center; 
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 16px, $line-h: 19px, $lett-s:0.03em, $color: $fourth-color,  $txt-decor:none, $txt-align:center);
 }
 
 .people-pic{
-    width: 270px;
+    width: 450px;
+    height: 460px;
+}
+@media screen and (min-width:1200px){
+    .people-pic{
+        width: 270px;
     height: 260px;
+    }
 }
 .icon-cont{
+  
     display: flex;
     gap: 10px;
-    margin-bottom: 45px;
-    margin-left: 31px;
+    margin-bottom: 25px;
+    margin-left: 25%;
 }
+@media screen and (min-width:1200px){
+    .icon-cont{
+        margin-left: 11%;
+    }
+}
+
 .icon-circle{
     width: 44px;
     height: 44px;

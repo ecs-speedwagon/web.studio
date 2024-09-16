@@ -35,9 +35,11 @@ a:hover::after{
     flex-direction: column;
 }
 .main-logo{
+
     @include txt($font-f:'Raleway', $font-w: 700, $font-s: 26px, $line-h: 31px, $lett-s: 0.03px, $color:#000,  $txt-decor:none, $txt-align:left);
    
 }
+
 .Web{
     color: $hover-color;
 }
@@ -48,12 +50,19 @@ a:hover::after{
     gap: 95px;
 }
 .main-nav-child{
-    display: flex;
+    opacity: 0;
+}
+@media screen and (min-width:1200px) {
+    .main-nav-child{
+        display: flex;
     justify-content: space-between;
     gap: 310px;
     margin: 0;
     padding: 0;
+    opacity: 1;
+    }
 }
+
 .navigation-cont{
     @include txt($font-f:'Roboto', $font-w: 500, $font-s:  14px, $line-h: 16px, $lett-s: 0.02em, $color: $fourth-color,  $txt-decor:none, $txt-align:left);
     display: flex;

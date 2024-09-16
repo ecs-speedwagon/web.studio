@@ -7,14 +7,7 @@
 }
 
 .applications-btn{
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    color:var(--fourth-color);
-    text-align: center; 
+    @include txt($font-f: 'Roboto', $font-w: 500, $font-s: 16px, $line-h: 26px, $lett-s:0.03em, $color:$fourth-color,  $txt-decor:none, $txt-align:center); 
     background-color: var(--second-color);
     padding: 4px;
     border: none;

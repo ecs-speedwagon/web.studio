@@ -1,5 +1,4 @@
 .hero{  
-    height: 600px; 
     width: 100%;
     padding-top: 200px;
     background-image: linear-gradient( to bottom, rgba(47, 48, 58, 0.4), rgba(130, 132, 160, 0.4)),  
@@ -7,8 +6,19 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        
-}
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    @media screen and (min-width:1200px) {
+        .hero{
+            height: 600px; 
+            padding-top: 200px;
+        }
+    }
+
 .main-section-item{
     @include txt($font-f: 'Roboto', $font-w: 900, $font-s: 44px, $line-h: 60px, $lett-s:0.06em, $color:$third-color,  $txt-decor:none, $txt-align:center);
     display: flex;
@@ -26,16 +36,29 @@
 
 }
 .svg-cont{
-    display: flex;
-    margin: 95px auto;
-    justify-content: space-between;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+@media screen and (min-width:1200px) {
+    .svg-cont{
+        display: flex;
+        margin: 95px auto;
+        flex-direction: row;
+        align-items: first baseline;
+        justify-content: space-between;
+        gap: 30px;
+    }
+}
 .svg-cap{
-    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16px, $lett-s:0.03em, $color: $fourth-color,  $txt-decor:none, $txt-align: left);
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16px, $lett-s:0.03em, $color: $fourth-color,  $txt-decor:none, $txt-align: center);
     background-color: $third-color;
 }
+ @media screen and (min-width:1200px) {
+    .svg-cap{
+        @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16px, $lett-s:0.03em, $color: $fourth-color,  $txt-decor:none, $txt-align: left);
+    }
+ }
 .svg-subtitle{
     @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color: $fifth-color,  $txt-decor:none, $txt-align:left); 
     background-color: $third-color;
@@ -69,8 +92,14 @@
     background-position: center;
 }
 .picture-box{
-    display: flex;
-    justify-content: space-between;
+   display: none;
+}
+@media screen and (min-width:1200px) {
+    .picture-box{
+        display: flex;
+        justify-content: space-between;
+        opacity: 1;
+    }
 }
 .picture-box-item{
     width: 370px;
@@ -101,8 +130,17 @@ padding-top: 23px;
     padding-top: 0px;
 }
 
-
-
+.employment-pic{
+  display: none;
+}
+@media screen and (min-width:1200px){
+   .employment-pic{
+        display: block;
+        @include txt($font-f: 'Roboto', $font-w: 700, $font-s:36px, $line-h: 42px, $lett-s:0.03em, $color:$fourth-color,  $txt-decor:none, $txt-align:center);
+        padding-top: 0px;
+        opacity: 1;
+    }
+} 
 .icon{
     fill: $icon-color;
     margin-top: 11px;

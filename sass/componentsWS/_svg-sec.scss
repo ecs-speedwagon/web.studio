@@ -1,5 +1,10 @@
 .regular-customers{
-    max-height: 375px;
+    max-height: 750px;
+ }
+ @media screen and (min-width:1200px){
+    .regular-customers{
+        max-height: 375px;
+    }
  }
  .regular-customers>h2{
      margin-top:  94px;
@@ -9,8 +14,18 @@
     padding-top: 0px;
 }
 .regulars-logo{
+    flex-wrap: wrap;
+    margin: 0 auto;
     display: flex;
-    gap: 32px;
+    row-gap: -100px;
+    gap: 30px;
+}
+@media screen and (min-width:1200px){
+    .regulars-logo{
+        flex-wrap: nowrap;
+        display: flex;
+        gap: 32px;
+    }
 }
 .regulars-logo>li{
     margin-top: 50px;

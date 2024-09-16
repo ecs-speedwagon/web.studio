@@ -39,25 +39,12 @@
 
 }
 .app-c-title{
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 0.06em;
-    text-decoration: none;
-    color: var(--fourth-color);
-    text-align: left; 
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 18px, $line-h: 30px, $lett-s:0.06em, $color:$fourth-color,  $txt-decor:none, $txt-align:left);
     margin-bottom: 0;
 }
 .app-c-subtitle{
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    color: var(--fifth-color);
-    text-align: left; 
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 16px, $line-h: 30px, $lett-s:0.03em, $color:$fifth-color,  $txt-decor:none, $txt-align:left);
+    
     margin-top: 0;
     padding-top: 10px;
 }
@@ -70,16 +57,11 @@
     z-index: 1;
 }
 .porf-pic-hover>p{
-    font-family: 'Roboto';
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.03em;
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 18px, $line-h: 28px, $lett-s:0.03em, $color:rgba(255, 255, 255, 1),  $txt-decor:none, $txt-align:left);
         width: 322px;
         height: 168px;
         padding-left: 17px;
-    text-align: left;
-    color: rgba(255, 255, 255, 1); 
+; 
     
     opacity: 0;
  

@@ -67,14 +67,7 @@ a:hover::after{
     flex-direction: column;
 }
 .navigation-cont{
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: var(--fourth-color);
-    text-align: left; 
+    @include txt($font-f:'Roboto', $font-w: 500, $font-s:  14px, $line-h: 16px, $lett-s: 0.02em, $color: $fourth-color,  $txt-decor:none, $txt-align:left);
     display: flex;
     gap: 40px;
     align-items: center;
@@ -93,16 +86,9 @@ a:hover::after{
     align-items: center;
 }
 .connection-el{
+    @include txt($font-f: 'Roboto', $font-w: 500, $font-s: 14px, $line-h: 16px, $lett-s:0.02em, $color:$fourth-color,  $txt-decor:none, $txt-align:left);
     gap: 10px;
    display: flex;
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: var(--fourth-color);
-    text-align: left;
    
 }
 .connection-el>a{
@@ -120,16 +106,9 @@ a:hover::after{
     fill: var(--hover-color);}
 }
 .connection-el{
+    @include txt($font-f: 'Roboto', $font-w: 500, $font-s: 14px, $line-h: 16px, $lett-s:0.02em, $color:$fourth-color,  $txt-decor:none, $txt-align:left);
     gap: 10px;
     display: flex;
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: var(--fourth-color);
-    text-align: left; 
 }
 .connection-el:hover{
     color: var(--fourth-color);

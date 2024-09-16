@@ -28,6 +28,8 @@ address{
 }
 .foot-cont{
     display: flex;
+    gap: 40px;
+    justify-content: center;
 }
 .join-cont{
     display: flex;
@@ -65,11 +67,12 @@ address{
         border: none;
         cursor: pointer;}
  }
-.join-div>h3{
+.join-div>h4{
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
     text-transform:uppercase;
 margin:0 90px;
 margin-top:10px ;
+
 }
 .join-div{
     display: block;
@@ -77,4 +80,30 @@ margin-top:10px ;
 }
 .join-help-div{
     margin-left: 63px;
+}
+.input-div{
+    margin-left: 30px;
+
+   
+}
+.email-txt{
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+text-transform: uppercase;
+
+}
+.email-input{
+    border: 1px solid $fifth-color;
+    border-radius: 3px;
+    padding: 10px 20px;
+    background-color: inherit;
+   
+}
+.email-btn{
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 16px, $line-h: 30px, $lett-s:0.06em, $color:$third-color,  $txt-decor:none, $txt-align:center);
+  
+    border: 1px solid $fifth-color;
+    border-radius: 3px;
+    padding: 4px 30px;
+    margin-left: 10px;
+    background-color: $hover-color;
 }
