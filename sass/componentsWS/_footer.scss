@@ -1,11 +1,23 @@
 .background-foot{
     background-color: $first-color;
-    height: 252px;
-    padding-top: 50px;
+    height: 603px;
 }
+@media screen and (min-width:1200px) {
+    .background-foot{
+        height: 252px;
+        padding-top: 50px;
+    }
+    }
+
 
 address{
-    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:center);
+}
+@media screen and (min-width:1200px) {
+    address{
+        @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+
+    }
 }
 .address-ul{
     display: block;
@@ -22,6 +34,12 @@ address{
 .logo-foot{
     @include txt($font-f: 'Raleway', $font-w: 700, $font-s: 26px, $line-h: 31px, $lett-s:0.03em, $color: #FFFFFF,  $txt-decor:none, $txt-align:center);
     padding: 10px 0;
+    margin: 34%;
+}
+@media screen and (min-width:1200px){
+    .logo-foot{
+    margin:0 0 ;
+    }
 }
 .join-help-div{
     margin-left: 63px;
@@ -38,6 +56,7 @@ address{
     flex-direction: row;
     gap: 40px;
     justify-content: center;
+    align-items: baseline;
     }
 }
 .join-cont{
@@ -57,6 +76,7 @@ address{
     transition-delay: 10ms;
 }
 .join-circle{
+    margin: 50%;
     width: 44px;
     height: 44px;
   border-radius: 50%;
@@ -65,6 +85,11 @@ address{
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.83, -0.08, 0.32, 1);
   transition-delay: 10ms;
+}
+@media screen and (min-width:1200px) {
+    .join-circle{
+margin: 0 ;
+    }
 }
 .join-circle:hover{
     background-color: $hover-color;
@@ -77,11 +102,15 @@ address{
         cursor: pointer;}
  }
 .join-div>h4{
-    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:center);
     text-transform:uppercase;
 margin:0 90px;
 margin-top:10px ;
-
+}
+@media screen and (min-width:1200px) {
+    .join-div>h4{
+        @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+    }
 }
 .join-div{
     display: block;
@@ -92,13 +121,33 @@ margin-top:10px ;
 }
 .input-div{
     margin-left: 30px;
-
-   
+    display: block;
+    flex-direction: column;
 }
-.email-txt{
-    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
-text-transform: uppercase;
+// @media screen and (min-width:1200px){
+//     .input-div{
+//         display: flex;
+     
+//     }
+// }
+@media screen and (min-width:1200px){
+    .input-button-box{
+        display: flex;
+        flex-direction: row;
+    }
+}
 
+.email-txt{
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:center);
+text-transform: uppercase;
+margin-left: -10%;
+}
+
+@media screen and (min-width:1200px){
+    .email-txt{
+        @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+        margin-left: 3px;
+    }
 }
 .email-input{
     border: 1px solid $fifth-color;

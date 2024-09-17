@@ -1031,13 +1031,21 @@ a:hover::after {
   top: 20%;
   left: 36%;
   background-color: #FFFFFF;
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   -webkit-transform: translate(-50% -50%);
           transform: translate(-50% -50%);
   padding: 15px;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    top: 20%;
+    left: 36%;
+    min-width: 528px;
+    min-height: 581px;
+  }
+}
 .no-scroll {
   overflow: visible;
 }
@@ -1193,10 +1201,15 @@ a:hover::after {
 
 .background-foot {
   background-color: #2F303A;
-  height: 252px;
-  padding-top: 50px;
+  height: 603px;
 }
 
+@media screen and (min-width: 1200px) {
+  .background-foot {
+    height: 252px;
+    padding-top: 50px;
+  }
+}
 address {
   font-family: "Roboto";
   font-weight: 400;
@@ -1205,9 +1218,21 @@ address {
   letter-spacing: 0.03em;
   color: #FFFFFF;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  address {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: left;
+  }
+}
 .address-ul {
   display: block;
   -webkit-box-align: center;
@@ -1234,8 +1259,14 @@ address {
   text-decoration: none;
   text-align: center;
   padding: 10px 0;
+  margin: 34%;
 }
 
+@media screen and (min-width: 1200px) {
+  .logo-foot {
+    margin: 0 0;
+  }
+}
 .join-help-div {
   margin-left: 63px;
 }
@@ -1267,6 +1298,9 @@ address {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 .join-cont {
@@ -1293,6 +1327,7 @@ address {
 }
 
 .join-circle {
+  margin: 50%;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -1307,6 +1342,11 @@ address {
           transition-delay: 10ms;
 }
 
+@media screen and (min-width: 1200px) {
+  .join-circle {
+    margin: 0;
+  }
+}
 .join-circle:hover {
   background-color: #2196F3;
   width: 44px;
@@ -1326,12 +1366,24 @@ address {
   letter-spacing: 0.03em;
   color: #FFFFFF;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   margin: 0 90px;
   margin-top: 10px;
 }
 
+@media screen and (min-width: 1200px) {
+  .join-div > h4 {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.41px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: left;
+  }
+}
 .join-div {
   display: block;
 }
@@ -1342,8 +1394,24 @@ address {
 
 .input-div {
   margin-left: 30px;
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
+@media screen and (min-width: 1200px) {
+  .input-button-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .email-txt {
   font-family: "Roboto";
   font-weight: 700;
@@ -1352,10 +1420,24 @@ address {
   letter-spacing: 0.03em;
   color: #FFFFFF;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
+  margin-left: -10%;
 }
 
+@media screen and (min-width: 1200px) {
+  .email-txt {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.41px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: left;
+    margin-left: 3px;
+  }
+}
 .email-input {
   border: 1px solid #757575;
   border-radius: 3px;
@@ -1407,11 +1489,10 @@ address {
 .regulars-logo {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  row-gap: -100px;
+  margin-bottom: 95px;
   gap: 30px;
 }
 
@@ -1426,13 +1507,10 @@ address {
   }
 }
 .regulars-logo > li {
-  margin-top: 50px;
-  width: 170px;
+  width: calc((100% - 30px) / 2);
   height: 92px;
   border: solid 1px #AFB1B8;
   border-radius: 5px;
-  margin-bottom: 95px;
-  padding: 15px 30px;
   -webkit-transition-property: fill, border;
   transition-property: fill, border;
   -webkit-transition-duration: 300ms;
@@ -1443,6 +1521,16 @@ address {
           transition-delay: 10ms;
 }
 
+@media screen and (min-width: 768px) {
+  .regulars-logoli {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .regulars-logoli {
+    width: 170px;
+  }
+}
 .regulars-logo-item {
   fill: rgb(175, 177, 184);
   -webkit-transition-property: fill, border;
@@ -1461,6 +1549,11 @@ address {
 .regulars-logo > li:hover .regulars-logo-item {
   fill: #2196F3;
   border: none;
+}
+
+.reg-icon {
+  display: block;
+  margin: 20px auto;
 }
 
 .background-div {
