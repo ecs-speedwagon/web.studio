@@ -11,6 +11,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        
     }
     @media screen and (min-width:1200px) {
         .hero{
@@ -18,7 +19,14 @@
             padding-top: 200px;
         }
     }
-
+//     @media (min-device-pixel-ratio: 2),
+//     (min-resolution: 192dpi),
+//     (min-resolution: 2dppx) {
+//    .hero{
+//        background-image:  linear-gradient( to bottom, rgba(47, 48, 58, 0.4), rgba(130, 132, 160, 0.4)),  
+//        url(../img/Img.svg);
+//        background-size: cover;
+//    }}
 .main-section-item{
     @include txt($font-f: 'Roboto', $font-w: 900, $font-s: 44px, $line-h: 60px, $lett-s:0.06em, $color:$third-color,  $txt-decor:none, $txt-align:center);
     display: flex;
@@ -39,6 +47,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width:768px) {
+.svg-cont{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
 }
 @media screen and (min-width:1200px) {
     .svg-cont{
@@ -62,15 +78,38 @@
 .svg-subtitle{
     @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color: $fifth-color,  $txt-decor:none, $txt-align:left); 
     background-color: $third-color;
+    width: 450px;
 }
+@media screen and (min-width:768px){
+    .svg-subtitle{
+        width: 354px;
+    }
+}
+@media screen and (min-width:1200px){
+    .svg-subtitle{
+        width: 270px;
+    }
+}
+
 .svg-cont-el::before{
     display: block;
  content: "";
- width: 270px;
+ width: 450px;
  height: 120px;
  border-radius: 3px;
  background-color:$second-color ;
 }
+@media screen and (min-width:768px){
+    .svg-cont-el::before{
+        width: 354px;
+    }
+}
+@media screen and (min-width:1200px){
+    .svg-cont-el::before{
+        width: 270px;
+    }
+}
+
 .svg-cont-el:first-child::before{
     background-image: url(../img/antenna.svg);
     background-repeat: no-repeat;
@@ -168,13 +207,19 @@ padding-top: 23px;
 }
 .modal{
     position: absolute;
-    top: 20%;
-    left: 36%;
+    top: 15%;
+    left: 3%;
     background-color:$third-color;
-    min-width: 450px;
-    min-height: 609px;
+    width: 450px;
+    height: 609px;
     transform: translate(-50% -50%);
     padding: 15px;
+}
+@media screen and (min-width:768px){
+    .modal{
+    top: 20%;
+    left: 20%;
+    }
 }
 @media screen and (min-width:1200px){
     .modal{
@@ -190,7 +235,14 @@ padding-top: 23px;
 
 .modal-name{
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 20px, $line-h: 23.44px, $lett-s:0.03em, $color:#000,  $txt-decor:none, $txt-align:center);
-
+width: 370px;
+margin: 0 auto;
+}
+@media screen and (min-width:1200px){
+    .modal-name{
+        width: auto;
+        
+    }
 }
 .modal-form{
     display: flex;
@@ -214,11 +266,16 @@ padding-top: 23px;
     display: flex;
     flex-direction: column;
     height: 40px;
-    width: 447px;
+    width: 370px;
  border: 1px solid rgba(33, 33, 33, 0.2);
  border-radius: 4px;
  padding-left: 40px;
  margin-top: 5px;
+}
+@media screen and (min-width:1200px){
+    .modal-form-el{
+        width: 447px;
+    }
 }
 
 .modal-form-el:focus{
@@ -244,12 +301,18 @@ cursor: pointer;
 #modal-comm{
     margin:0 auto;
     height: 120px;
-    width: 447px;
- 
+    width: 379px;
     padding-left: 15px;
     border: 1px solid rgba(33, 33, 33, 0.2);
  border-radius: 4px;
  margin-bottom: 15px;
+ padding-top: 10px;
+}
+@media screen and (min-width:1200px){
+    #modal-comm{
+   padding-top: 0;
+    width: 447px;
+    }
 }
 #checkbox-link{
     color: $hover-color;
@@ -257,9 +320,13 @@ cursor: pointer;
     cursor: default;
 }
 .m-f-checkbox{
-    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color:rgba(117, 117, 117, 1),  $txt-decor:none, $txt-align:left);
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 13px, $line-h: 14px, $lett-s:0.03em, $color:rgba(117, 117, 117, 1),  $txt-decor:none, $txt-align:left);
     margin: 0 auto;
-
+}
+@media screen and (min-width:1200px) {
+    .m-f-checkbox{
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color:rgba(117, 117, 117, 1),  $txt-decor:none, $txt-align:left);
+    }
 }
 .modal-form>button{
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 16px, $line-h: 30px, $lett-s:0.06em, $color:$third-color,  $txt-decor:none, $txt-align:center);
@@ -274,12 +341,18 @@ cursor: pointer;
 
 
 .modal-btn{
-    margin-left: 470px;
+    margin-left: 93%;
     border: 1px solid rgba(33, 33, 33, 0.2)  ;
     background-color: $third-color;
     width: 30px;
     height: 30px;
     border-radius: 50%;
+
+}
+@media screen and (min-width:1200px){
+.modal-btn{
+    margin-left:470px;
+}
 }
 .X{
     transition-property: fill ;

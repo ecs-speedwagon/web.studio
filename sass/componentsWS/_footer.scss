@@ -1,6 +1,6 @@
 .background-foot{
     background-color: $first-color;
-    height: 603px;
+    height: 610px;
 }
 @media screen and (min-width:1200px) {
     .background-foot{
@@ -34,11 +34,14 @@ address{
 .logo-foot{
     @include txt($font-f: 'Raleway', $font-w: 700, $font-s: 26px, $line-h: 31px, $lett-s:0.03em, $color: #FFFFFF,  $txt-decor:none, $txt-align:center);
     padding: 10px 0;
-    margin: 34%;
+    
+display: flex;
+justify-content: center;
 }
 @media screen and (min-width:1200px){
     .logo-foot{
-    margin:0 0 ;
+        display: inline-flex;
+    
     }
 }
 .join-help-div{
@@ -47,7 +50,7 @@ address{
 .foot-cont{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     justify-content: center;
 }
 @media screen and (min-width:1200px){
@@ -63,9 +66,16 @@ address{
     display: flex;
     gap: 10px;
     margin-bottom: 45px;
-    margin-left: 31px;
-}
+   margin-right:140px;
+    justify-content: center;
 
+}
+@media screen and (min-width:1200px){
+    .join-cont{
+        margin-left: 31px;
+       justify-content: baseline;
+    }
+}
 .join{
     fill: $third-color;
     margin-top: 11px;
@@ -114,33 +124,30 @@ margin-top:10px ;
 }
 .join-div{
     display: block;
+    
 
 }
 .join-help-div{
     margin-left: 63px;
 }
 .input-div{
-    margin-left: 30px;
     display: block;
-    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
 }
-// @media screen and (min-width:1200px){
-//     .input-div{
-//         display: flex;
-     
-//     }
-// }
+
 @media screen and (min-width:1200px){
-    .input-button-box{
+    .input-div{
+
         display: flex;
-        flex-direction: row;
+       
     }
 }
 
 .email-txt{
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:center);
 text-transform: uppercase;
-margin-left: -10%;
 }
 
 @media screen and (min-width:1200px){
@@ -154,7 +161,19 @@ margin-left: -10%;
     border-radius: 3px;
     padding: 10px 20px;
     background-color: inherit;
+    width: 420px;
+   margin-bottom: 20px;
+ 
    
+}
+@media screen and (min-width:1200px){
+    .email-input{
+        margin-bottom: 0px;
+        border: 1px solid $fifth-color;
+        border-radius: 3px;
+        padding: 10px 20px;
+        background-color: inherit;
+    }
 }
 .email-btn{
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 16px, $line-h: 30px, $lett-s:0.06em, $color:$third-color,  $txt-decor:none, $txt-align:center);
