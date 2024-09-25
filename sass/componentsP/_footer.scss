@@ -1,11 +1,30 @@
 .background-foot{
     background-color: $first-color;
-    height: 252px;
-    padding-top: 50px;
+    height: 610px;
 }
 
+@media screen and (min-width: 768px){
+    .background-foot{
+       max-height: 463px;
+        padding-top: 50px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .background-foot{
+        height: 252px;
+        padding-top: 50px;
+    }
+}
+
+
 address{
-    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:center);
+}
+@media screen and (min-width:1200px) {
+    address{
+        @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 14px, $line-h: 24px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+
+    }
 }
 .address-ul{
     display: block;
@@ -22,22 +41,76 @@ address{
 .logo-foot{
     @include txt($font-f: 'Raleway', $font-w: 700, $font-s: 26px, $line-h: 31px, $lett-s:0.03em, $color: #FFFFFF,  $txt-decor:none, $txt-align:center);
     padding: 10px 0;
+    
+display: flex;
+justify-content: center;
+}
+@media screen and (min-width:1200px){
+    .logo-foot{
+        display: inline-flex;
+    
+    }
 }
 .join-help-div{
     margin-left: 63px;
 }
 .foot-cont{
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+@media screen and (min-width:768px){
+    .foot-cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
+    align-items: baseline;
+    }
+}
+@media screen and (min-width:1200px){
+    .foot-cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: baseline;
+    }
+}
+@media screen and (min-width:768px){
+    .foot-section{
+            display: flex;
+            align-items: first baseline;
+            margin: 0 auto;
+}
+}
+@media screen and (min-width:1200px){
+    .foot-section{
+            display: inline-flex;
+}
 }
 .join-cont{
     display: flex;
     gap: 10px;
     margin-bottom: 45px;
-    margin-left: 31px;
-}
+   margin-right:140px;
+    justify-content: center;
 
+}
+@media screen and (min-width:768px){
+    .join-cont{
+        margin-right:0px;
+    }
+}
+@media screen and (min-width:1200px){
+    .join-cont{
+        margin-left: 31px;
+       justify-content: baseline;
+    }
+}
 .join{
     fill: $third-color;
     margin-top: 11px;
@@ -48,6 +121,7 @@ address{
     transition-delay: 10ms;
 }
 .join-circle{
+    margin: 50%;
     width: 44px;
     height: 44px;
   border-radius: 50%;
@@ -56,6 +130,11 @@ address{
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.83, -0.08, 0.32, 1);
   transition-delay: 10ms;
+}
+@media screen and (min-width:1200px) {
+    .join-circle{
+margin: 0 ;
+    }
 }
 .join-circle:hover{
     background-color: $hover-color;
@@ -68,35 +147,75 @@ address{
         cursor: pointer;}
  }
 .join-div>h4{
-    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:center);
     text-transform:uppercase;
-margin:0 90px;
 margin-top:10px ;
+}
 
+@media screen and (min-width:1200px) {
+    .join-div>h4{
+        @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+    }
 }
 .join-div{
     display: block;
-
+    
+}
+@media screen and (min-width:768px) {
+    .join-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
 }
 .join-help-div{
     margin-left: 63px;
 }
-.input-div{
-    margin-left: 30px;
 
-   
+
+.input-div{
+    display: block;
+    justify-content: center;
+    text-align: center;
+
+}
+
+@media screen and (min-width:1200px){
+        .input-div{
+          display: flex;
+
+    }
 }
 .email-txt{
-    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+    @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:center);
 text-transform: uppercase;
+}
 
+@media screen and (min-width:1200px){
+    .email-txt{
+        @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+        margin-left: 3px;
+    }
 }
 .email-input{
     border: 1px solid $fifth-color;
     border-radius: 3px;
     padding: 10px 20px;
     background-color: inherit;
+    width: 420px;
+   margin-bottom: 20px;
+ 
    
+}
+@media screen and (min-width:1200px){
+    .email-input{
+        margin-bottom: 0px;
+        border: 1px solid $fifth-color;
+        border-radius: 3px;
+        padding: 10px 20px;
+        background-color: inherit;
+    }
 }
 .email-btn{
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 16px, $line-h: 30px, $lett-s:0.06em, $color:$third-color,  $txt-decor:none, $txt-align:center);

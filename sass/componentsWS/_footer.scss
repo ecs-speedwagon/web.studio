@@ -2,6 +2,12 @@
     background-color: $first-color;
     height: 610px;
 }
+@media screen and (min-width: 768px){
+    .background-foot{
+       max-height: 463px;
+        padding-top: 50px;
+    }
+}
 @media screen and (min-width:1200px) {
     .background-foot{
         height: 252px;
@@ -53,14 +59,37 @@ justify-content: center;
     gap: 20px;
     justify-content: center;
 }
-@media screen and (min-width:1200px){
+@media screen and (min-width:768px){
     .foot-cont{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
     align-items: baseline;
     }
+}
+@media screen and (min-width:1200px){
+    .foot-cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: baseline;
+    }
+}
+@media screen and (min-width:768px){
+    .foot-section{
+            display: flex;
+            align-items: first baseline;
+            margin: 0 auto;
+}
+}
+@media screen and (min-width:1200px){
+    .foot-section{
+            display: inline-flex;
+}
 }
 .join-cont{
     display: flex;
@@ -69,6 +98,11 @@ justify-content: center;
    margin-right:140px;
     justify-content: center;
 
+}
+@media screen and (min-width:768px){
+    .join-cont{
+        margin-right:0px;
+    }
 }
 @media screen and (min-width:1200px){
     .join-cont{
@@ -114,9 +148,9 @@ margin: 0 ;
 .join-div>h4{
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:center);
     text-transform:uppercase;
-margin:0 90px;
 margin-top:10px ;
 }
+
 @media screen and (min-width:1200px) {
     .join-div>h4{
         @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
@@ -125,11 +159,20 @@ margin-top:10px ;
 .join-div{
     display: block;
     
-
+}
+@media screen and (min-width:768px) {
+    .join-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
 }
 .join-help-div{
     margin-left: 63px;
 }
+
+
 .input-div{
     display: block;
     justify-content: center;
@@ -138,13 +181,11 @@ margin-top:10px ;
 }
 
 @media screen and (min-width:1200px){
-    .input-div{
+        .input-div{
+          display: flex;
 
-        display: flex;
-       
     }
 }
-
 .email-txt{
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:center);
 text-transform: uppercase;

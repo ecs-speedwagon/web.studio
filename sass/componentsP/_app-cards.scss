@@ -3,18 +3,32 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 95px;
-    
+    justify-content: center;
 }
+
 .app-cards-el{
-    width: calc( (100% - 60px)/3 );
+    width: calc( (100% )/1);
     line-height: 0;
     position: relative;
    overflow: hidden;
    height: 404px;
+    max-width:404px;
+   
 }
-
+@media screen and (min-width: 768px){
+    .app-cards-el{
+        width: calc( (100% - 30px)/2 );
+        max-width:354px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .app-cards-el{
+        width: calc( (100% - 60px)/3 );
+        max-width:370px;
+    }
+}
 .app-cards-el:hover{
-    box-shadow: 1px 2px 3px var(--fifth-color);
+    box-shadow: 1px 2px 3px $fifth-color;
    .porf-pic-hover{
     animation-name: appearance;
     animation-duration: 1s;
@@ -27,16 +41,33 @@
 
 }
 .app-cards-div{
-    width: 370px;
+    
+    width: 449px;
     height: 110px;
-  padding-top: 25px;
-  padding-left: 20px;
-   border-bottom: 2px solid #ECECEC;
-    border-left: 1px solid #ECECEC;
-    border-right: 1px solid #ECECEC;
+    padding-top: 20px;
+    margin-top: -7px;
+        padding-left: 23px;
+        border-left: 1px solid #ECECEC;
+        border-right: 1px solid #ECECEC;
+        border-bottom: 2px solid #ECECEC;
+//    border-bottom: 2px solid #ECECEC;
+//     border-left: 1px solid #ECECEC;
+//     border-right: 1px solid #ECECEC;
   position: absolute;
   z-index: 3;
-
+}
+@media screen and (min-width: 768px){
+    .app-cards-div{
+        width: 355px;
+        
+    }
+}
+@media screen and (min-width: 1200px){
+    .app-cards-div{
+        width: 370px;
+        padding-top: 25px;
+        padding-left: 20px;
+    }
 }
 .app-c-title{
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 18px, $line-h: 30px, $lett-s:0.06em, $color:$fourth-color,  $txt-decor:none, $txt-align:left);
@@ -48,33 +79,51 @@
     margin-top: 0;
     padding-top: 10px;
 }
-.porf-pic-hover{
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 63px 24px;
-    height: 294px;
-    z-index: 1;
-}
+// .porf-pic-hover{
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     padding: 63px 24px;
+//     height: 294px;
+   
+// }
 .porf-pic-hover>p{
     @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 18px, $line-h: 28px, $lett-s:0.03em, $color:rgba(255, 255, 255, 1),  $txt-decor:none, $txt-align:left);
         width: 322px;
         height: 168px;
-        padding-left: 17px;
-; 
-    
-    opacity: 0;
+        padding-left: 25px;
+        padding-top: 35px;
+  
  
 }
-@keyframes appearance{ 
-    0%{
-    transform: translateY(100%);
+.porf-pic-hover{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $hover-color;
+    bottom: -100%;
+    transition:1s all ;
+    opacity: 0.8;
+}
+.app-hover-top{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+}
+.app-hover-top:hover .porf-pic-hover{
+    bottom: 0;
+}
+// @keyframes appearance{ 
+//     0%{
+//     transform: translateY(100%);
     
- }
- 100%{ 
-    transform: translateY(0%);
-    background-color: rgba(33, 150, 243, 0.9);
-}
-}
+//  }
+//  100%{ 
+//     transform: translateY(0%);
+//     background-color: rgba(33, 150, 243, 0.9);
+// }
+// }
    
     
