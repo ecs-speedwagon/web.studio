@@ -149,10 +149,19 @@ margin: 0 ;
     @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:center);
     text-transform:uppercase;
 margin-top:10px ;
+width: 120px;
+margin: 0 auto;
 }
-
+@media screen and (min-width:768px) {
+    .join-div>h4{
+        margin-left: 150px;
+        margin-right: 20px;
+        @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
+    }
+}
 @media screen and (min-width:1200px) {
     .join-div>h4{
+        margin-left: 40px;
         @include txt($font-f: 'Roboto', $font-w: 700, $font-s: 14px, $line-h: 16.41px, $lett-s:0.03em, $color:$third-color,  $txt-decor:none, $txt-align:left);
     }
 }
@@ -169,10 +178,25 @@ margin-top:10px ;
     }
 }
 .join-help-div{
-    margin-left: 63px;
+    margin: 0 auto;
+    padding-left: 80px;
+    width: 206px;
 }
-
-
+@media screen and (min-width:1200px) {
+    .join-help-div{
+        
+        padding-left: 50px;
+        width: 206px;
+    }
+}
+// @media screen and (min-width:768px) {
+//     .join-div{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+        
+//     }
+// }
 .input-div{
     display: block;
     justify-content: center;

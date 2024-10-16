@@ -1,7 +1,7 @@
 .app-cards{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 29px;
     margin-bottom: 95px;
     justify-content: center;
 }
@@ -24,7 +24,7 @@
 @media screen and (min-width: 1200px){
     .app-cards-el{
         width: calc( (100% - 60px)/3 );
-        max-width:370px;
+        max-width:369px;
     }
 }
 .app-cards-el:hover{
@@ -42,11 +42,12 @@
 }
 .app-cards-div{
     
-    width: 449px;
-    height: 110px;
-    padding-top: 20px;
-    margin-top: -7px;
-        padding-left: 23px;
+    width: 404px;
+    height: 111px;
+    padding-top: 23px;
+    margin-top: -6px;
+    padding-left: 24px;
+
         border-left: 1px solid #ECECEC;
         border-right: 1px solid #ECECEC;
         border-bottom: 2px solid #ECECEC;
@@ -58,13 +59,12 @@
 }
 @media screen and (min-width: 768px){
     .app-cards-div{
-        width: 355px;
-        
+        width: 354px;        
     }
 }
 @media screen and (min-width: 1200px){
     .app-cards-div{
-        width: 370px;
+        width: 369px;
         padding-top: 25px;
         padding-left: 20px;
     }
@@ -74,8 +74,7 @@
     margin-bottom: 0;
 }
 .app-c-subtitle{
-    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 16px, $line-h: 30px, $lett-s:0.03em, $color:$fifth-color,  $txt-decor:none, $txt-align:left);
-    
+    @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 16px, $line-h: 30px, $lett-s:0.03em, $color:$fifth-color,  $txt-decor:none, $txt-align:left);    
     margin-top: 0;
     padding-top: 10px;
 }
@@ -87,9 +86,12 @@
 //     height: 294px;
    
 // }
+.porfolio-pic{
+    width: 404px;
+}
 .porf-pic-hover>p{
     @include txt($font-f: 'Roboto', $font-w: 400, $font-s: 18px, $line-h: 28px, $lett-s:0.03em, $color:rgba(255, 255, 255, 1),  $txt-decor:none, $txt-align:left);
-        width: 322px;
+        width: 323px;
         height: 168px;
         padding-left: 25px;
         padding-top: 35px;

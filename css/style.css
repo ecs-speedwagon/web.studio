@@ -469,7 +469,7 @@ a:hover::after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
+  gap: 29px;
   margin-bottom: 95px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -494,7 +494,7 @@ a:hover::after {
 @media screen and (min-width: 1200px) {
   .app-cards-el {
     width: calc((100% - 60px) / 3);
-    max-width: 370px;
+    max-width: 369px;
   }
 }
 .app-cards-el:hover {
@@ -516,11 +516,11 @@ a:hover::after {
 }
 
 .app-cards-div {
-  width: 449px;
-  height: 110px;
-  padding-top: 20px;
-  margin-top: -7px;
-  padding-left: 23px;
+  width: 404px;
+  height: 111px;
+  padding-top: 23px;
+  margin-top: -6px;
+  padding-left: 24px;
   border-left: 1px solid #ECECEC;
   border-right: 1px solid #ECECEC;
   border-bottom: 2px solid #ECECEC;
@@ -530,12 +530,12 @@ a:hover::after {
 
 @media screen and (min-width: 768px) {
   .app-cards-div {
-    width: 355px;
+    width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
   .app-cards-div {
-    width: 370px;
+    width: 369px;
     padding-top: 25px;
     padding-left: 20px;
   }
@@ -565,6 +565,10 @@ a:hover::after {
   padding-top: 10px;
 }
 
+.porfolio-pic {
+  width: 404px;
+}
+
 .porf-pic-hover > p {
   font-family: "Roboto";
   font-weight: 400;
@@ -574,7 +578,7 @@ a:hover::after {
   color: rgb(255, 255, 255);
   text-decoration: none;
   text-align: left;
-  width: 322px;
+  width: 323px;
   height: 168px;
   padding-left: 25px;
   padding-top: 35px;
@@ -1667,26 +1671,18 @@ a:hover::after {
 
 .modal {
   position: absolute;
-  top: 15%;
-  left: 3%;
+  top: 50%;
+  left: 50%;
   background-color: #FFFFFF;
   width: 450px;
   height: 609px;
-  -webkit-transform: translate(-50% -50%);
-          transform: translate(-50% -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 15px;
 }
 
-@media screen and (min-width: 768px) {
-  .modal {
-    top: 20%;
-    left: 20%;
-  }
-}
 @media screen and (min-width: 1200px) {
   .modal {
-    top: 20%;
-    left: 36%;
     min-width: 528px;
     min-height: 581px;
   }
@@ -2119,10 +2115,27 @@ address {
   text-align: center;
   text-transform: uppercase;
   margin-top: 10px;
+  width: 120px;
+  margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  .join-div > h4 {
+    margin-left: 150px;
+    margin-right: 20px;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.41px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: left;
+  }
+}
 @media screen and (min-width: 1200px) {
   .join-div > h4 {
+    margin-left: 40px;
     font-family: "Roboto";
     font-weight: 700;
     font-size: 14px;
@@ -2152,9 +2165,17 @@ address {
   }
 }
 .join-help-div {
-  margin-left: 63px;
+  margin: 0 auto;
+  padding-left: 80px;
+  width: 206px;
 }
 
+@media screen and (min-width: 1200px) {
+  .join-help-div {
+    padding-left: 50px;
+    width: 206px;
+  }
+}
 .input-div {
   display: block;
   -webkit-box-pack: center;
